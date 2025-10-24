@@ -1,0 +1,42 @@
+:root{
+  /* Soft Pastel Glass palette */
+  --bg:#0b1020;
+  --bg-2:#06121a;
+  --card:rgba(255,255,255,0.04);
+  --muted:#c0cbe0;
+  --accent:#9be7ff; /* pastel sky blue */
+  --accent-2:#ffc9e6; /* pastel pink */
+  --success:#b9f6c4;
+  --danger:#ff9aa2;
+  /* slightly stronger glass for better contrast */
+  --glass: rgba(255,255,255,0.08);
+}
+html,body,#__next{height:100%;}
+body{font-family:Inter,system-ui,Segoe UI,Arial;background:linear-gradient(180deg,var(--bg),var(--bg-2));color:#e6eef8;margin:0;padding:0;font-size:16px}
+.container{max-width:900px;margin:40px auto;padding:20px}
+.card{background:linear-gradient(180deg,var(--glass),rgba(255,255,255,0.01));padding:16px;border-radius:12px;box-shadow:0 8px 22px rgba(2,6,23,0.6);transition:transform .12s ease,box-shadow .12s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 48px rgba(2,6,23,0.65)}
+.row{display:flex;gap:12px;align-items:center}
+input,select,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);color:inherit;padding:10px;border-radius:10px;transition:box-shadow .12s ease,border-color .12s ease}
+button{background:var(--accent);color:#021124;border:none;padding:10px 14px;border-radius:10px;cursor:pointer;box-shadow:0 8px 20px rgba(155,231,255,0.12);transition:transform .12s ease,box-shadow .12s ease}
+button:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(155,231,255,0.14)}
+.muted{color:var(--muted);font-size:13px}
+.small{font-size:13px}
+.expense-item{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px dashed rgba(255,255,255,0.03)}
+.tags{display:flex;gap:6px}
+.tag{background:var(--glass);padding:6px 10px;border-radius:999px;font-size:12px;border:1px solid rgba(255,255,255,0.06)}
+
+/* focus and accessibility */
+input:focus,select:focus,textarea:focus{box-shadow:0 0 0 6px rgba(155,231,255,0.06);border-color:rgba(155,231,255,0.28);outline:none}
+
+/* small responsive tweaks */
+@media (max-width:600px){
+  .container{margin:20px;padding:16px}
+  button{padding:10px}
+}
+
+/* header nav tweaks */
+.nav-link{color:inherit;text-decoration:none;padding:6px 8px;border-radius:8px;transition:background .12s ease,color .12s ease}
+.nav-link:hover{background:rgba(255,255,255,0.02)}
+.btn-cta{display:inline-block;background:var(--accent);color:#021124;border-radius:10px;padding:8px 12px;box-shadow:0 8px 20px rgba(155,231,255,0.12);transition:transform .12s ease,box-shadow .12s ease}
+.btn-cta:hover{transform:translateY(-2px);box-shadow:0 14px 34px rgba(155,231,255,0.14)}
