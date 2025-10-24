@@ -2,7 +2,7 @@
 
 A minimal Next.js expense tracker prototype.
 
-This project was built for the Digital Science 2025 Technocly AI Hack Day as part of the Coders Track.
+This project was built for the Digital Science 2025 Technology AI Hack Day as part of the Coders Track.
 
 ### Features
 - Simple CRUD for expenses (amount, category, date, description, tags)
